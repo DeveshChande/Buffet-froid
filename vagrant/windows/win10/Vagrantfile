@@ -2,7 +2,6 @@ Vagrant.configure("2") do |config|
 
   config.vm.define "windows10" do |win10|
     win10.vm.box = "gusztavvargadr/windows-10"
-    win10.vm.provision "file", source: "sysinternalsSuite.zip", destination: "sysinternalsSuite.zip"
     win10.vm.provision "shell", path:"../windows-scripts/setupWinX.ps1"
   
     win10.vm.provider "virtualbox" do |vb|
