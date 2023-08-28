@@ -1,0 +1,15 @@
+
+Vagrant.configure("2") do |config|
+
+  config.vm.define "winServer2019" do |ws19|
+    ws19.vm.box = "gusztavvargadr/windows-server-2019-standard"
+    win19.vm.provision "shell", path:"../windows-scripts/setupWinServerX.ps1"
+  
+    ws19.vm.provider "virtualbox" do |vb|
+      vb.gui = true
+      vb.memory = "8192"
+    end
+
+  end
+  
+end

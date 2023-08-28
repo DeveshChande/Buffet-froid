@@ -1,0 +1,15 @@
+
+Vagrant.configure("2") do |config|
+
+  config.vm.define "winServer2022" do |ws22|
+    ws22.vm.box = "gusztavvargadr/windows-server-2019-standard"
+    win22.vm.provision "shell", path:"../windows-scripts/setupWinServerX.ps1"
+  
+    ws22.vm.provider "virtualbox" do |vb|
+      vb.gui = true
+      vb.memory = "8192"
+    end
+
+  end
+  
+end

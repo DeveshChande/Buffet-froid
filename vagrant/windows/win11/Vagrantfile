@@ -1,0 +1,15 @@
+Vagrant.configure("2") do |config|
+
+  config.vm.define "windows11" do |win11|
+    win11.vm.box = "gusztavvargadr/windows-11"
+    win11.vm.provision "file", source: "sysinternalsSuite.zip", destination: "sysinternalsSuite.zip"
+    win11.vm.provision "shell", path:"../windows-scripts/setupWinX.ps1"
+  
+    win11.vm.provider "virtualbox" do |vb|
+      vb.gui = true
+      vb.memory = "8192"
+    end
+
+  end
+  
+end
