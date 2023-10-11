@@ -1,5 +1,5 @@
-# L-15050
-L-15050 enables deployment & provisioning of virtual infrastructure geared towards detection engineering. It provides standardized & reproducible environments, manages orchestration, and configures networking.
+# Buffet-froid
+Buffet-froid enables deployment & provisioning of virtual infrastructure geared towards detection engineering. It provides standardized & reproducible environments, manages orchestration, and configures networking.
 
 It builds on-premise deployments via Vagrant and cloud-based deployments via Terraform<sup>\*</sup>, Bicep<sup>\*</sup>, and CloudFormation<sup>*</sup>, while software management is controlled via Chocolatey.
 
